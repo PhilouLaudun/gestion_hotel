@@ -45,11 +45,14 @@
   }
   .card-text {
     // style de la zone d'affichage du texte et définition de la grille d'affichage
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
     background: $white;
     display: grid;
     grid-template-columns: 75% 25%;
-    grid-template-rows: 50px;
-    grid-template-areas: "a b";git 
+    grid-template-rows: 70px;
+    grid-template-areas: "a b"; 
     
     // définition du style du texte d'information et animation au chargement de la page
     h2 {
