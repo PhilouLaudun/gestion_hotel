@@ -1,0 +1,88 @@
+// fichier des styles par défaut
+//initialisation des polices
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Questrial-Regular.ttf);
+}
+@font-face {
+  font-family: "font-2";
+  src: url(../assets/fonts/KronaOne-Regular.ttf);
+}
+
+$font-1: "font-1",arial,sans-serif;
+$font-2: "font-2",arial, serif;
+
+//initialisation des variables des couleurs
+$color-1: #f6f5f5;
+$color-2: #1687a7;
+$color-3: #d3e0ea;
+$color-4: #276668;
+$color-5 : #E6E6FA;
+$color-6 : #32a1ce;
+$black: rgb(40, 40, 40);
+$blacksn:rgba(40,40,40,0.6);
+$red: rgb(253, 87, 87);
+$blue:steelblue;
+$white: #f3f0f0;
+
+// initialisation de l'ensemble des balises du site
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+
+  &::selection {
+    color: $color-1;
+    background: $color-2;
+  }
+}
+// defilement fluide lors de l'utilisation des ascenseurs
+html { 
+  scroll-behavior: smooth;
+}
+// paramètre par défaut des liens visités
+a,
+a:visited {
+  color: $color-4;
+}
+// paramètres par défaut du corps de la page HTML
+body {
+  font-family: $font-1;
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-1;
+  color: $black;
+  overflow: hidden;
+
+// polices par défaut des éléments des pages
+}
+h1, h4 {
+  font-family: $font-2;
+}
+h2, h3, p, ul, li, input, textarea {
+  font-family: $font-1;
+}
+// definit la position normale de la section main des pages
+main {
+  position: relative;
+}
+// format du bouton envoyer du formulaire de contact
+.button {
+  background: $color-3;
+  height: 55px;
+  width: 126px;
+  border-radius: 50px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    letter-spacing: 1px;
+    color: $color-2;
+  }
+}

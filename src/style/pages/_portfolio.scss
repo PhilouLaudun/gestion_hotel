@@ -1,0 +1,196 @@
+// style page Portfolio
+.portfolio {
+  //on se cale sur l'ensemble du viewport
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+// on redefinit pour cette page l'emplacement des icones, leur orientation et leur couleur des réseaux sociaux et la taille en mode responsive
+  .social-network {
+    top: 1%;
+    right: 3%;
+    ul {
+      display: flex; // mode en ligne
+      a {
+        color: $blacksn; // couleur permettant de les voir sur le fond sombre
+      }
+    }
+    @media screen and (max-width: 1200px){
+      right: 40px;
+      font-size: 1.5rem;
+
+    }
+  }
+//on redefinit pour cette page la dimension de la navigation en mode responsive
+  .navigation {
+    @media screen and (max-width: 1080px) {
+      font-size: 1rem;
+      line-height: 25px;
+      top: 0.5rem;
+      left: 0.3rem;
+      &::before {
+        height: 200px;
+        width: 200px;
+        top: -80px;
+        left: -80px;
+      }
+      .navactive {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+// affichage et animation du fond de la page 
+.bgport {
+  background: linear-gradient(-45deg, $color-2, $color-4, $color-5);
+  background-size: 400% 400%;
+  animation: gradient 15s linear infinite;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+// definition de la grille d'affichage des slides
+.gridcase {
+  display: grid;
+  height: 100%;
+  width: 100%;
+
+  margin: 0 auto;
+
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 10% 60% 25%;
+  grid-template-areas:
+    "a b"
+    "a c"
+    "d d";
+    
+    }
+    // positionnement du logo pour cette page et mode responsive
+    .logo {
+    position:relative;
+    grid-area:a; // sur le coté dla page
+    align-self: center;
+    justify-self: center;
+
+    @media screen and (max-width: 1080px) {
+      position:relative;
+      grid-area:b;// sur le haut de la page 
+      align-self: center;
+      justify-self: center;
+      width: 80px;
+      height: 80px;
+    }
+  }
+  // positionnement de la barre des boutons radio  et mode responsive
+.choice {
+  grid-area: b; // en haut de page
+  display: grid;
+  justify-items: left;
+  align-items: center;
+  margin-left: 10%;
+  
+  @media screen and (max-width: 1080px) {
+    grid-area: a;// sur le coté de la page
+    align-items: end;
+    margin-bottom: 50%;
+    margin-left: 10px;
+    z-index: 1;
+  }
+// mise en forme des boutons radio de la barre en fonction de sa position et mode responsive
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    background: $color-5;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    input[type="radio"] {
+      transform: translate(-5px, 1px);
+    }
+    align-items: center;
+
+
+    @media screen and (max-width: 1080px) {
+    display:grid;
+    max-width:100px;
+    height: 70%;
+    font-size:0.7rem;
+    justify-self: left;
+    padding: 5px 2px 5px 5px;
+
+    @media screen and (max-width:490px) {
+      font-size:0.45rem;
+    }
+  }
+  }
+}
+// mise en forme des slides et modification des paramètre par défaut du composant chargé
+.swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.mySwiper2 {
+  grid-area: c;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 1%;
+  padding-right: 10px;
+  .swiper-slide {
+    background: rgba(
+      $color: #000000,
+      $alpha: 0
+    ); // permet de supprimer la couleur de fond
+    img {
+      height: 100%;
+      width: auto;
+      border-radius: 20px;
+    }
+  }
+}
+.mySwiper {
+  grid-area: d;
+  box-sizing: border-box;
+  padding: 10px 0;
+  .swiper-slide {
+    width: 45%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+}
+.mySwiper .mySwiper .swiper-slide img {
+  display: block;
+  object-fit: fill;
+  overflow: hidden;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: $blue;
+}
