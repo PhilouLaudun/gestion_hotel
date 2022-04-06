@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { PriceData } from "../data/priceData";
+import { DetailHotelData } from "../data/detailHotelData";
 
 const Carte = (props) => { // carte d'affichage des prestations
-  const [currentCard] = useState(PriceData); // tableau de cartes à afficher, fichier externe en json
+  const [currentCard] = useState(DetailHotelData); // tableau de cartes à afficher, fichier externe en json
   const carte = currentCard[props.carteNumber];// tableau contenant la carte à afficher, index passé en props
 
   return (
