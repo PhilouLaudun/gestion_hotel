@@ -1,5 +1,6 @@
 // style page Accueil
 .home {
+  overflow: scroll;
   //on se cale sur l'ensemble du viewport et definit la largeur minimale à 400px
   height: 100vh;
   width: 100vw;
@@ -72,7 +73,7 @@
     // mise en forme des éléments àafficher
     .main-content {
       position: absolute;
-    top: 20%;
+    top: 40%;
     left: 10%;
     right: 10%;
     width: 85%;
@@ -83,7 +84,7 @@
       justify-items: center;
       text-align: center;
       color: $color-1;
-      line-height: 100px;
+
       width: 85%;
       left: 0;
       right: 0;

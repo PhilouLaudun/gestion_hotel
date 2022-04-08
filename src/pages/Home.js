@@ -26,6 +26,7 @@ const Home = () => {
             <Carte carteNumber={3} />
             <Carte carteNumber={4} />
             <Carte carteNumber={5} />
+            <Carte carteNumber={6} />
           </div>
         </div>
       </div>
