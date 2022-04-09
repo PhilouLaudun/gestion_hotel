@@ -16,7 +16,10 @@ const Home = () => {
         <Logo />
         <SocialNetworks />
         {/*Image de fond */}
-        <div className="bg-image"></div>
+        <div className="bg"></div>
+        <div className="bg bg2"></div>
+        <div className="bg bg3"></div>
+
         {/*Contenu de la page */}
         <div className="home-main">
           <div className="main-content">

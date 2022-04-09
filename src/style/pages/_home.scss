@@ -1,22 +1,26 @@
 // style page Accueil
+
 .home {
-  overflow: scroll;
   //on se cale sur l'ensemble du viewport et definit la largeur minimale à 400px
+  position: absolute;
   height: 100vh;
   width: 100vw;
   min-width: 400px;
+  overflow-y:auto;
+  overflow-x: hidden;
+
   // on redefinit pour cette page l'emplacement du logo en mode responsive
   .logo {
     position: absolute;
     width: 100px;
     height: 100px;
     @media screen and (max-width: 980px) {
-      bottom: 10%;
-      right: 10%;
+      top: 10%;
+      right: 45%;
     }
-    @media screen and (max-width: 500px) {
-      bottom: 8%;
-      right: 8%;
+    @media screen and (max-width: 700px) {
+      top: 3%;
+      right: 38%;
     }
   }
   // on redefinit pour cette page l'emplacement des icones des réseaux sociaux en mode responsive
@@ -43,22 +47,33 @@
       }
     }
   }
-  // affichage de l'image de fond de la page et positionnement responsive
-  .bg-image {
-    position: absolute;
+  // affichage du fond animé de la page
+  .bg {
+    animation: slide 14s linear infinite alternate;
+    background-image: linear-gradient(-60deg, $color-3 50%, $color-2 20%);
+    bottom: 0;
+    left: -50%;
+    opacity: 0.5;
+    position: fixed;
+    right: -50%;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../../../public/assets/img/fond_page_home.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.8;
-    z-index: -10;
+    z-index: -1;
+  }
 
-    @media screen and (max-width: 980px) {
-      background-position: 25%;
+  .bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 18s;
+  }
+
+  .bg3 {
+    animation-duration: 20s;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(-25%);
+    }
+    100% {
+      transform: translateX(25%);
     }
   }
   // mise en forme du contenu de la page
@@ -69,17 +84,17 @@
     padding-left: 1rem;
     width: auto;
     height: 100%;
-    overflow: hidden;
-    // mise en forme des éléments àafficher
+
+    // mise en forme des éléments à afficher
     .main-content {
       position: absolute;
-    top: 40%;
-    left: 10%;
-    right: 10%;
-    width: 85%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+      top: 30%;
+      left: 10%;
+      right: 10%;
+      width: 85%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       user-select: none;
       justify-items: center;
       text-align: center;
@@ -90,12 +105,10 @@
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      // Nom : animation et taille de la police en mode responsive
- 
-      // Qualite : animation et taille de la police en mode responsive
 
+       @media screen and (max-width: 1620px) {
+      top: 25%;
     }
-    // Thèmes : animation,couleur, taille et position de la police en mode responsive
-
+    }
   }
 }
