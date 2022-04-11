@@ -1,23 +1,20 @@
 import React from "react";
 import Navigations from '../componants/Navigations';
-
+import Header from "../componants/Header";
+import Logo from "../componants/Logo";
+import SocialNetworks from "../componants/SocialNetworks";
 export const Hotel1 = () => {
     return (
-        <main>
-            <div className="Hotel">
-                <Navigations />
-                    
+      <main>
+        <div className="Hotel bghotel">
+          <Navigations />
+          <Header />
+          <Logo />
+          <SocialNetworks />
 
-            <div>Hotels1</div>    
-            </div>
-            
-        
-        
-        
-        
-        
-        </main>
-        
+          <div>Hotels1</div>
+        </div>
+      </main>
     );
 };
 export const Hotel2 = () => {
