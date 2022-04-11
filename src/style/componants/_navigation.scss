@@ -47,3 +47,35 @@ ul:hover li:not(:hover) {
 ul:hover li:hover {
   color: $black;
   }
+.nav_hotels {
+  cursor: pointer;
+    display: flex;
+    // padding-right: 6rem;
+    transition: .5s;
+
+    &:hover .nav_hotel,
+    .nav-projects:hover {
+      visibility: visible;
+      opacity: 1;
+
+      li {
+        transform: rotateY(0deg)
+      }
+    }
+  .nav_hotel {
+    position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      padding: 0 40px;
+      width: 300px;
+      transform: translateX(70px);
+      transition: .3s ;
+      perspective: 500px;
+
+      li {
+        transform: rotateY(30deg) scaleX(1.2);
+        transform-origin: center;
+        transition: .3s;
+      }
+  }
+}
