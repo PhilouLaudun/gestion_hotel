@@ -1,0 +1,37 @@
+.hotelcontent {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 10% 90%;
+  grid-template-areas:
+    "titre titre"
+    "descrip suite";
+
+  .nom_hotel {
+    grid-area: titre;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5rem solid $color-3;
+    .texte {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+  .descriptionhotel {
+    grid-area: descrip;
+    background: red;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .suitehotel {
+    grid-area: suite;
+    background: blue;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+}
