@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { DetailHotelData } from '../data/detailHotelData';
+import { DetailChambreData } from '../data/detailchambreData';
 
 const DetailHotel = (props) => {
     const [currentHotel] = useState(DetailHotelData)
@@ -16,7 +17,12 @@ const DetailHotel = (props) => {
         <p>{hotel.infos}</p>
       </div>
 
-      <div className="suitehotel">suite</div>
+      <div className="suitehotel">
+        <h2>Les suites</h2>
+<h2>Les suites</h2>
+
+      </div>
+
     </div>
   );
 }
