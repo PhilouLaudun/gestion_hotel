@@ -20,20 +20,92 @@ export const Hotel1 = () => {
   );
 };
 export const Hotel2 = () => {
-  return <div>Hotels2</div>;
+  return (
+    <main>
+      <div className="Hotel bghotel">
+        <Navigations />
+        <Header />
+        <Logo />
+        <SocialNetworks />
+        <div className="contenthotel">
+          <DetailHotel numeroHotel={1} />
+        </div>
+      </div>
+    </main>
+  );
 };
 export const Hotel3 = () => {
-  return <div>Hotels3</div>;
+  return (
+    <main>
+      <div className="Hotel bghotel">
+        <Navigations />
+        <Header />
+        <Logo />
+        <SocialNetworks />
+        <div className="contenthotel">
+          <DetailHotel numeroHotel={2} />
+        </div>
+      </div>
+    </main>
+  );
 };
 export const Hotel4 = () => {
-  return <div>Hotels4</div>;
+  return (
+    <main>
+      <div className="Hotel bghotel">
+        <Navigations />
+        <Header />
+        <Logo />
+        <SocialNetworks />
+        <div className="contenthotel">
+          <DetailHotel numeroHotel={3} />
+        </div>
+      </div>
+    </main>
+  );
 };
 export const Hotel5 = () => {
-  return <div>Hotels5</div>;
+  return (
+    <main>
+      <div className="Hotel bghotel">
+        <Navigations />
+        <Header />
+        <Logo />
+        <SocialNetworks />
+        <div className="contenthotel">
+          <DetailHotel numeroHotel={4} />
+        </div>
+      </div>
+    </main>
+  );
 };
 export const Hotel6 = () => {
-  return <div>Hotels6</div>;
+  return (
+    <main>
+      <div className="Hotel bghotel">
+        <Navigations />
+        <Header />
+        <Logo />
+        <SocialNetworks />
+        <div className="contenthotel">
+          <DetailHotel numeroHotel={5} />
+        </div>
+      </div>
+    </main>
+  );
 };
 export const Hotel7 = () => {
-  return <div>Hotels7</div>;
+  return (
+    <main>
+      <div className="Hotel bghotel">
+        <Navigations />
+        <Header />
+        <Logo />
+        <SocialNetworks />
+        <div className="contenthotel">
+          <DetailHotel numeroHotel={6} />
+        </div>
+      </div>
+    </main>
+  );
 };

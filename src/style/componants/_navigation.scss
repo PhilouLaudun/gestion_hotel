@@ -6,12 +6,11 @@
   line-height: 32px;
   z-index: +10;
 
-
-   &::before {
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
-    height: 300px;
-    width: 320px;
+    height: 280px;
+    width: 280px;
     background: $color-3;
     opacity: 0.75;
     border-radius: 50%;
@@ -28,54 +27,57 @@
         transform: scale(1);
       }
     }
-}
+  }
 }
 .navactive {
-    color: $black;
-    font-size: 2rem;
-    font-style: italic;
-    animation: clignote 3s linear infinite;
-    @keyframes clignote {
-        50% {color: $color-2;}
+  color: $black;
+  font-size: 2rem;
+  font-style: italic;
+  animation: clignote 3s linear infinite;
+  @keyframes clignote {
+    50% {
+      color: $color-2;
     }
-
-    }
-    
-ul:hover li:not(:hover) {
-    opacity: .4;
   }
+}
+
+ul:hover li:not(:hover) {
+  opacity: 1;
+}
 ul:hover li:hover {
   color: $black;
-  }
+}
 .nav_hotels {
   cursor: pointer;
-    display: flex;
-    // padding-right: 6rem;
-    transition: .5s;
+  display: flex;
+  transition: 0.5s;
+  p {
+    color: $color-4;
+  }
+  &:hover .nav_hotel,
+  .nav_hotel:hover {
+    visibility: visible;
+    opacity: 1;
+    color: $color-4;
 
-    &:hover .nav_hotel,
-    .nav_hotel:hover {
-      visibility: visible;
-      opacity: 1;
-
-      li {
-        transform: rotateY(0deg)
-      }
+    li {
+      transform: rotateY(0deg);
     }
+  }
   .nav_hotel {
     position: absolute;
-      visibility: hidden;
-      opacity: 0;
-      padding: 0 40px;
-      width: 300px;
-      transform: translateX(70px);
-      transition: .3s ;
-      perspective: 500px;
+    visibility: hidden;
+    opacity: 0;
+    padding: 0 40px;
+    width: 300px;
+    transform: translateX(70px);
+    transition: 0.3s;
+    perspective: 500px;
 
-      li {
-        transform: rotateY(30deg) scaleX(1.2);
-        transform-origin: center;
-        transition: .3s;
-      }
+    li {
+      transform: rotateY(30deg) scaleX(1.2);
+      transform-origin: center;
+      transition: 0.5s;
+    }
   }
 }

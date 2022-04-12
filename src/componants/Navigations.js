@@ -14,7 +14,7 @@ const Navigation = () => {
           <li style={{ paddingLeft: "35px" }}>Acceuil</li>
         </NavLink>
         <li style={{ paddingLeft: "25px" }} className="nav_hotels">
-          Portfolio
+          <p>Hotels</p>
           <ul className="nav_hotel">
             <NavLink
               end

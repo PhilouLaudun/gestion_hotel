@@ -12,7 +12,7 @@ const DetailHotel = (props) => {
         </div>
       </div>
       <div className="descriptionhotel">
-        <img src="{hotel.img}" alt="" />
+        <img src={hotel.img} alt={hotel.title} />
         <p>{hotel.infos}</p>
       </div>
 

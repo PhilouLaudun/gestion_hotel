@@ -13,19 +13,31 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    border-bottom: 0.5rem solid $color-3;
+    border-bottom: 0.5rem solid $color-7;
     .texte {
       h2 {
-        font-size: 2rem;
+        color: $color-2;
+        font-size: 2.5rem;
+        font-style: italic;
       }
     }
   }
   .descriptionhotel {
     grid-area: descrip;
-    background: red;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    margin-top: 0;
+
+    img {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-size: 1.5rem;
+      color: $color-2;
+      font-family: $font-1;
+    }
   }
   .suitehotel {
     grid-area: suite;

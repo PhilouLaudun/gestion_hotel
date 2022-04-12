@@ -1,44 +1,51 @@
 export const DetailHotelData = [
   {
     id: 1,
-    title: "Hotel Du Lac",
-    infos: "Annecy",
+    title: "Annecy : Hotel Du Lac",
+    infos:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur blanditiis provident nulla enim quas exercitationem laboriosam reprehenderit doloribus quos ab soluta possimus hic recusandae voluptatem totam, nostrum ipsam saepe?",
     img: "./assets/img/Hotels/annecy.jpg",
   },
   {
     id: 2,
-    title: "Hotel Des Vagues",
-    infos: "Biarritz",
+    title: "Biarritz : Hotel Des Vagues",
+    infos:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur blanditiis provident nulla enim quas exercitationem laboriosam reprehenderit doloribus quos ab soluta possimus hic recusandae voluptatem totam, nostrum ipsam saepe?",
     img: "./assets/img/Hotels/biarritz.jpg",
   },
   {
     id: 3,
-    title: "Hotel De La Plage",
-    infos: "Bretagne",
+    title: "Bretagne : Hotel De La Plage",
+    infos:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur blanditiis provident nulla enim quas exercitationem laboriosam reprehenderit doloribus quos ab soluta possimus hic recusandae voluptatem totam, nostrum ipsam saepe?",
     img: "./assets/img/Hotels/bretagne.jpg",
   },
   {
     id: 4,
-    title: "Hotel Des Bories",
-    infos: "Gordes",
+    title: "Gordes :Hotel Des Bories",
+    infos:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur blanditiis provident nulla enim quas exercitationem laboriosam reprehenderit doloribus quos ab soluta possimus hic recusandae voluptatem totam, nostrum ipsam saepe?",
     img: "./assets/img/Hotels/gordes.jpg",
   },
   {
     id: 5,
-    title: "Hotel Du Rocher",
-    infos: "Monaco",
+    title: "Monaco : Hotel Du Rocher",
+    infos:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur blanditiis provident nulla enim quas exercitationem laboriosam reprehenderit doloribus quos ab soluta possimus hic recusandae voluptatem totam, nostrum ipsam saepe?",
     img: "./assets/img/Hotels/monaco.jpg",
   },
   {
     id: 6,
-    title: "Hotel De Paris",
-    infos: "Paris",
+    title: "Paris : Hotel De Paris",
+    infos:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur blanditiis provident nulla enim quas exercitationem laboriosam reprehenderit doloribus quos ab soluta possimus hic recusandae voluptatem totam, nostrum ipsam saepe?",
     img: "./assets/img/Hotels/paris.jpg",
   },
   {
     id: 7,
-    title: "Hotel De La Cure",
-    infos: "Vichy",
+    title: "Vichy : Hotel De La Cure",
+    infos:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur blanditiis provident nulla enim quas exercitationem laboriosam reprehenderit doloribus quos ab soluta possimus hic recusandae voluptatem totam, nostrum ipsam saepe?",
     img: "./assets/img/Hotels/vichy.jpg",
   },
 ];
