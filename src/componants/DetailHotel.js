@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DetailHotelData } from "../data/detailHotelData";
 import { DetailChambreData } from "../data/detailchambreData";
 import ModalSuite from "./ModalSuite";
@@ -10,16 +10,18 @@ const DetailHotel = (props) => {
   const numberHotel = props.numeroHotel + 1;
   const array = suite.filter((tri) => tri.hotel === numberHotel);
   const [visible, setVisible] = useState(false);
-  const [idSuite,setIdSuite]=useState(0)
+  const [idSuite, setIdSuite] = useState(0);
+  const [detailSuite, setDetailSuite] = useState([]);
+  useEffect(() => {
+    setDetailSuite(suite.filter((tri) => tri.id === idSuite))
+  }, [visible]);
   
-  
-  const montre = (e,element) => {
-    e.preventDefault()
-    setVisible(true);
+  const Montre = (e, element) => {
+    e.preventDefault();
+     setVisible(true);
     setIdSuite(element.id);
   };
-
-  const cache = () => {
+  const Cache = () => {
     setVisible(false);
   };
   return (
@@ -37,13 +39,18 @@ const DetailHotel = (props) => {
 
       <div className="suitehotel">
         <h2>Les suites</h2>
-        <ModalSuite visible={visible} cache={cache} suite={idSuite} />
+        <ModalSuite
+          visible={visible}
+          cache={Cache}
+          suite={detailSuite}
+          numsuite={idSuite}
+        />
         {array.map((chambre) => (
           <section
             className="suite"
             id={chambre.id}
             key={chambre.id}
-            onClick={(e) => montre(e,chambre)}
+            onClick={(e) => Montre(e, chambre)}
           >
             <div className="suitecarte">
               <div className="imagecarte">

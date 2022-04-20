@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ModalSuite = (props) => {
-  console.log(props)
+ console.log(props.suite)
   return (
     <div
       className="modale"
@@ -11,9 +11,19 @@ const ModalSuite = (props) => {
       }}
     >
       <button onClick={props.cache}>X</button>
-      Modal_suite
+      <div>
+        {" "}
+        fgshsdfgh
+        {props.suite.map((suite) => (
+          <div>
+            {suite.id}
+            {suite.nom}
+            {suite.infos}
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
-export default ModalSuite
+export default ModalSuite;
